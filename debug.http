@@ -1,0 +1,19 @@
+
+### アプリから実行し、バーコードを生成
+POST http://localhost:8080/tickets
+
+### アプリから実行し、チケットのQRコードのURLを取得
+GET http://localhost:8080/tickets/c8e7f9a1d6b4e5f7c8e7f9a1d6b4e5f7
+
+### アプリでQRコードの画像URLを表示
+GET http://localhost:8080/assets/qrcode/c8e7f9a1d6b4e5f7c8e7f9a1d6b4e5f7.png
+
+### バーコード読み込みアプリから実行し、チケットに紐づくユーザー情報を確認
+GET http://localhost:8080/tickets/c8e7f9a1d6b4e5f7c8e7f9a1d6b4e5f7/confirm
+
+### バーコード読み込みアプリから実行し、ユーザーの画像表示
+GET http://localhost:8080/assets/users/1.jpeg
+
+### バーコード読み込みアプリから承認すれば、チケットのステータスが承認済みになる
+GET http://localhost:8080/tickets/c8e7f9a1d6b4e5f7c8e7f9a1d6b4e5f7/approve
+
